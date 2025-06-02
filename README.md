@@ -51,4 +51,25 @@ A simple Django REST API for managing tasks.
 pytest
 ```
 
+## Running with Docker
+
+To build and run the application locally using Docker:
+
+1. Build the Docker image:
+   ```sh
+   docker build -t task-tracker .
+   ```
+
+2. Run database migrations:
+   ```sh
+   docker run --rm task-tracker python manage.py migrate
+   ```
+
+3. Start the application:
+   ```sh
+   docker run -p 8000:8000 task-tracker
+   ```
+
+The API will be available at [http://localhost:8000](http://localhost:8000).
+
 
